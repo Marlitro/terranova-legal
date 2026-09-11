@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Contabilidad Amazon, M.E Terranova LLC</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1c1c1e; background: #fff;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  .meta { color: #6b6b70; font-size: .9rem; margin: 0 0 2rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  a { color: #0b5fff; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; color: #6b6b70; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad</h1>
+<p class="meta">Aplicación de contabilidad de Amazon para QuickBooks Online<br>
+M.E Terranova LLC · Última actualización: 11 de septiembre de 2026</p>
+
+<h2>Alcance</h2>
+<p>Esta aplicación es de uso interno y exclusivo de M.E Terranova LLC. No se ofrece
+al público, no tiene usuarios externos y no está publicada en el marketplace de
+Intuit. Su única función es convertir los informes de liquidación de Amazon Seller
+Central en asientos contables dentro de la propia cuenta de QuickBooks Online de
+la empresa.</p>
+
+<h2>Qué información se procesa</h2>
+<ul>
+  <li>Informes de liquidación de Amazon Seller Central: cargos, comisiones,
+      impuestos, reservas e identificadores de pedido.</li>
+  <li>Costos unitarios de inventario por SKU, cargados por la empresa.</li>
+  <li>Datos contables de QuickBooks Online: el plan de cuentas y los asientos
+      que la propia aplicación crea.</li>
+  <li>Credenciales de acceso a QuickBooks (tokens de OAuth).</li>
+</ul>
+<p>No se procesan datos personales de compradores. Los informes de Amazon que la
+aplicación consume contienen identificadores de pedido y montos, no nombres ni
+direcciones de clientes finales.</p>
+
+<h2>Dónde se guarda</h2>
+<p>Los datos residen en una base de datos PostgreSQL privada controlada por la
+empresa. Los tokens de OAuth se guardan cifrados con AES-256-GCM; no se almacenan
+en texto plano en ningún punto.</p>
+
+<h2>Con quién se comparte</h2>
+<p>Con nadie. No hay terceros, ni servicios de analítica, ni publicidad, ni venta
+o cesión de información. La aplicación se comunica únicamente con la API de
+Intuit para leer el plan de cuentas y crear asientos en la cuenta de QuickBooks
+de la propia empresa.</p>
+
+<h2>Cuánto tiempo se conserva</h2>
+<p>Los registros contables se conservan mientras sean necesarios para la
+contabilidad y las obligaciones fiscales de la empresa. Los tokens de acceso
+dejan de ser válidos al desconectar la aplicación desde QuickBooks.</p>
+
+<h2>Cómo revocar el acceso</h2>
+<p>Desde QuickBooks Online, en <em>Configuración → Aplicaciones conectadas</em>, se
+puede desconectar la aplicación en cualquier momento. Al hacerlo, los tokens
+guardados quedan invalidados de inmediato y la aplicación pierde todo acceso a la
+cuenta.</p>
+
+<h2>Seguridad</h2>
+<ul>
+  <li>Comunicación con Intuit exclusivamente sobre HTTPS.</li>
+  <li>Secretos en reposo cifrados con AES-256-GCM, con autenticación del mensaje:
+      un valor alterado falla al descifrar en vez de devolver datos corruptos.</li>
+  <li>Registro de auditoría de toda operación que modifica la contabilidad.</li>
+  <li>Los asientos ya enviados a QuickBooks no se sobrescriben: se conserva la
+      evidencia de lo que se contabilizó.</li>
+</ul>
+
+<h2>Contacto</h2>
+<p>M.E Terranova LLC — <a href="mailto:marcosjmontesm@gmail.com">marcosjmontesm@gmail.com</a></p>
+
+<footer>
+Este documento describe el tratamiento de datos de una aplicación de uso interno.
+Si su alcance cambiara para incluir usuarios externos, esta política deberá
+revisarse.
+</footer>
+
+</body>
+</html>
