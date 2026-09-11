@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contabilidad Amazon — M.E Terranova LLC</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1c1c1e; background: #fff;
+  }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .4rem; }
+  h2 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  .meta { color: #6b6b70; font-size: .9rem; margin: 0 0 2rem; }
+  .note { background: #f5f5f7; border-left: 3px solid #c7c7cc; padding: .9rem 1rem; margin: 1.5rem 0; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  a { color: #0b5fff; }
+  nav { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; font-size: .95rem; }
+  nav a { margin-right: 1.2rem; }
+</style>
+</head>
+<body>
+
+<h1>Contabilidad Amazon</h1>
+<p class="meta">Herramienta interna de M.E Terranova LLC</p>
+
+<p>Esta aplicación convierte los informes de liquidación de Amazon Seller Central
+en asientos contables dentro de QuickBooks Online. Sustituye un proceso manual
+de hojas de cálculo y tablas dinámicas.</p>
+
+<div class="note">
+  <strong>Aplicación de uso interno.</strong> No se ofrece al público ni tiene
+  usuarios externos. La usa exclusivamente M.E Terranova LLC sobre su propia
+  cuenta de QuickBooks Online, y se ejecuta en la infraestructura de la empresa.
+  Esta página existe porque Intuit requiere una dirección pública para cada
+  aplicación registrada.
+</div>
+
+<h2>Qué hace</h2>
+<ul>
+  <li>Lee los informes de liquidación de Amazon (Flat File V2 y Date Range Report).</li>
+  <li>Clasifica cada cargo, comisión e impuesto según el plan de cuentas de la empresa.</li>
+  <li>Calcula el costo de la mercancía vendida por SKU.</li>
+  <li>Genera el asiento del periodo y lo registra en QuickBooks Online.</li>
+</ul>
+
+<h2>Acceso a QuickBooks</h2>
+<p>La conexión se establece mediante OAuth 2.0 y se limita al ámbito de
+contabilidad (<code>com.intuit.quickbooks.accounting</code>). Puede revocarse en
+cualquier momento desde QuickBooks Online, en
+<em>Configuración → Aplicaciones conectadas</em>.</p>
+
+<h2>Contacto</h2>
+<p>M.E Terranova LLC — <a href="mailto:marcosjmontesm@gmail.com">marcosjmontesm@gmail.com</a></p>
+
+<nav>
+  <a href="./eula.html">Términos de uso</a>
+  <a href="./privacy.html">Política de privacidad</a>
+</nav>
+
+</body>
+</html>
